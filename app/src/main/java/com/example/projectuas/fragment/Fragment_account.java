@@ -1,15 +1,20 @@
 package com.example.projectuas.fragment;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -21,8 +26,10 @@ public class Fragment_account extends Fragment {
     private Toolbar toolbar;
     private Bundle bundle;
     private TextView email_account;
-    private String txt_email;
     private Button btn_logout;
+    private ImageView image_profile;
+
+    private String txt_email;
 
     @Nullable
     @Override
@@ -31,6 +38,7 @@ public class Fragment_account extends Fragment {
 
         toolbar = view.findViewById(R.id.id_toolbar_account);
         email_account = view.findViewById(R.id.set_email);
+        image_profile = view.findViewById(R.id.img_profile);
         btn_logout = view.findViewById(R.id.btn_logout);
 
         bundle = getActivity().getIntent().getExtras();

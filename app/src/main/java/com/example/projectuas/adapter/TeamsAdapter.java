@@ -26,7 +26,7 @@ import javax.security.auth.callback.Callback;
 
 public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamsViewHolder> {
 
-    private ArrayList<ModelTeams> listTeams;
+    public ArrayList<ModelTeams> listTeams;
     private Callback callback;
     private int posku;
     private View viewku;
@@ -111,9 +111,8 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamsViewHol
 
             switch (item.getItemId()) {
                 case 1:
-                    //Delete data, butuh konfirmasi dialog
                     AlertDialog.Builder builder = new AlertDialog.Builder(viewku.getContext());
-                    builder.setMessage("Are you sure you want to delete data?")
+                    builder.setMessage("Are you sure you want to delete this data?")
                             .setCancelable(false)
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
@@ -126,11 +125,10 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamsViewHol
                                     dialog.cancel();
                                 }
                             })
-                            //Set your icon here
                             .setTitle(listTeams.get(posku).getName())
                             .setIcon(listTeams.get(posku).getImage());
                     AlertDialog alert = builder.create();
-                    alert.show();//showing the dialog
+                    alert.show();
 
                     break;
             }

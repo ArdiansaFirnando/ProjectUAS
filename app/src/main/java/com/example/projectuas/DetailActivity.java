@@ -1,8 +1,10 @@
 package com.example.projectuas;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +13,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projectuas.adapter.TeamsAdapter;
 import com.example.projectuas.fragment.Fragment_home;
+import com.example.projectuas.model.ModelTeams;
+
+import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -26,6 +32,9 @@ public class DetailActivity extends AppCompatActivity {
     private String name;
     private String description;
     private int image;
+
+    private ArrayList<ModelTeams> adapterArrayList;
+    private int my_position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
