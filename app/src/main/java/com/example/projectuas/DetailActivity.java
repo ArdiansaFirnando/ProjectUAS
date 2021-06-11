@@ -33,9 +33,6 @@ public class DetailActivity extends AppCompatActivity {
     private String description;
     private int image;
 
-    private ArrayList<ModelTeams> adapterArrayList;
-    private int my_position;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

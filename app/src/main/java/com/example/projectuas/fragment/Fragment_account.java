@@ -27,7 +27,6 @@ public class Fragment_account extends Fragment {
     private Bundle bundle;
     private TextView email_account;
     private Button btn_logout;
-    private ImageView image_profile;
 
     private String txt_email;
 
@@ -38,7 +37,6 @@ public class Fragment_account extends Fragment {
 
         toolbar = view.findViewById(R.id.id_toolbar_account);
         email_account = view.findViewById(R.id.set_email);
-        image_profile = view.findViewById(R.id.img_profile);
         btn_logout = view.findViewById(R.id.btn_logout);
 
         bundle = getActivity().getIntent().getExtras();
